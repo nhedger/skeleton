@@ -32,6 +32,12 @@ function new-package() {
 }
 ```
 
+## GitHub Actions
+
+This skeleton sets up some GitHub Actions workflows that expect you to set a
+personal access token (PAT) named `ACTIONS_TOKEN` in the repository's
+secrets. Some workflows may fail until the token is set.
+
 
 
 
