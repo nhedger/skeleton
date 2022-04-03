@@ -1,0 +1,20 @@
+# This file is mainly used to exclude unnecessary files from the distributed
+# Composer package.
+#
+#   The following rules apply when modifying this file:
+#
+#   1. Files or directories than are expected to be found only in one place MUST
+#      be prefixed with a forward slash (/).
+#
+#   2. Files and directories that are expected to be found in multiple places
+#      MUST NOT be prefixed with a forward slash (/).
+
+# Directories
+/.config/       export-ignore
+/.github/       export-ignore
+/tests/         export-ignore
+
+# Files
+.editorconfig   export-ignore
+.gitattributes  export-ignore
+.gitignore      export-ignore

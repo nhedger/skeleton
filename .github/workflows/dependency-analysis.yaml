@@ -1,0 +1,26 @@
+# https://docs.github.com/en/actions
+---
+name: Dependency Analysis
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  composer-require-checker:
+    name: Composer Require Checker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+          coverage: none
+          tools: composer-require-checker
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@v2
+      - name: Run Composer Require Checker
+        run: composer-require-checker

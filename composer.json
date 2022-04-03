@@ -1,0 +1,47 @@
+{
+    "name": "hedger/skeleton",
+    "description": "A skeleton for modern PHP libraries",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nicolas Hedger",
+            "email": "nicolas@hedger.ch"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.25",
+        "friendsofphp/php-cs-fixer": "^3.8",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^1.5",
+        "phpstan/phpstan-strict-rules": "^1.1",
+        "phpunit/phpunit": "^9.5"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Hedger\\Skeleton\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hedger\\Skeleton\\Test\\Unit\\": "tests/Unit/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "bamarni/composer-bin-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "analyse": "phpstan analyse --configuration=.config/phpstan.neon",
+        "coverage": "phpunit --configuration=.config/phpunit.xml",
+        "fix-style": "php-cs-fixer fix --config=.config/php-cs-fixer.php --diff",
+        "test": "phpunit --configuration=.config/phpunit.xml --no-coverage"
+    }
+}

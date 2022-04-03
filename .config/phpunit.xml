@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
+         bootstrap="../vendor/autoload.php"
+         cacheResultFile="../.build/phpunit/cache/test-results"
+         executionOrder="random"
+         forceCoversAnnotation="true"
+         beStrictAboutCoversAnnotation="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutTodoAnnotatedTests="true"
+         convertDeprecationsToExceptions="true"
+         failOnRisky="true"
+         failOnWarning="true"
+         verbose="true">
+    <testsuites>
+        <testsuite name="Unit Tests">
+            <directory>../tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage cacheDirectory="../.build/phpunit/code-coverage/cache" processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">../src</directory>
+        </include>
+        <report>
+            <xml outputDirectory="../.build/phpunit/code-coverage/xml-coverage"/>
+            <html outputDirectory="../.build/phpunit/code-coverage/html-coverage"/>
+        </report>
+    </coverage>
+
+    <logging>
+        <junit outputFile="../.build/phpunit/code-coverage/junit.xml"/>
+    </logging>
+</phpunit>

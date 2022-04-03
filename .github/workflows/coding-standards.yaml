@@ -1,0 +1,55 @@
+# https://docs.github.com/en/actions
+---
+name: Coding Standards
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+
+jobs:
+  composer-normalize:
+    name: Normalize composer.json
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.ACTIONS_TOKEN }}
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+          coverage: none
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@v2
+      - name: Normalize composer.json
+        run: composer normalize
+      - name: Commit normalized composer.json
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: composer.json
+          commit_user_name: Composer Normalize
+          commit_user_email: nicolas@hedger.ch
+          commit_message: Normalize composer.json
+          commit_author: "Nicolas Hedger <nicolas@hedger.ch>"
+
+  php-cs-fixer:
+    name: Check Code Style
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+          coverage: none
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@v2
+      - name: Create cache directory
+        run: mkdir -p .build/php-cs-fixer
+      - name: Run PHP CS Fixer
+        run: composer fix-style
+
