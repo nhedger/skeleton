@@ -5,7 +5,17 @@ name: Tests
 on:
   push:
     branches: [ main ]
+    paths:
+      - '**.php'
+      - 'tests/**'
+      - 'composer.json'
+      - '.config/phpunit.xml'
   pull_request:
+    paths:
+      - '**.php'
+      - 'tests/**'
+      - 'composer.json'
+      - '.config/phpunit.xml'
 
 jobs:
   tests:
