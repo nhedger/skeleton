@@ -1,0 +1,35 @@
+# https://docs.github.com/en/actions
+---
+name: Documentation
+
+on:
+  push:
+    branches:
+      - main
+      - docs/**
+    paths:
+      - docs/**
+  pull_request:
+      paths:
+        - docs/**
+
+jobs:
+  documentation:
+    name: Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build documentation
+        uses: ammaraskar/sphinx-action@master
+        with:
+          docs-folder: docs/
+          build-command: "make html -W"
+      - name: Publish documentation
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: docs/_build/html
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
