@@ -5,7 +5,13 @@ name: Dependency Analysis
 on:
   push:
     branches: [ main ]
+    paths:
+      - '**.php'
+      - 'composer.json'
   pull_request:
+    paths:
+      - '**.php'
+      - 'composer.json'
 
 jobs:
   composer-require-checker:
