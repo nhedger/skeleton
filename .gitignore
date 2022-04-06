@@ -1,5 +1,6 @@
 # Folders
 /.build/
+/docs/_build/
 /vendor/
 
 # Files
