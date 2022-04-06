@@ -5,8 +5,15 @@ name: Coding Standards
 on:
   push:
     branches: [ main ]
+    paths:
+      - '**.php'
+      - 'composer.json'
+      - '.config/php-cs-fixer.php'
   pull_request:
-
+    paths:
+      - '**.php'
+      - 'composer.json'
+      - '.config/php-cs-fixer.php'
 
 jobs:
   composer-normalize:

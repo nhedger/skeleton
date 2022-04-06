@@ -5,7 +5,15 @@ name: Static Analysis
 on:
   push:
     branches: [ main ]
+    paths:
+      - '**.php'
+      - 'composer.json'
+      - '.config/phpstan.neon'
   pull_request:
+    paths:
+      - '**.php'
+      - 'composer.json'
+      - '.config/phpstan.neon'
 
 jobs:
   phpstan:
