@@ -23,6 +23,8 @@ $config->setRules([
         'identical' => false,
         'less_and_greater' => false,
     ],
+    'blank_line_after_opening_tag' => false,
+    'linebreak_after_opening_tag' => false,
 ]);
 
 return $config
