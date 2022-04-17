@@ -23,7 +23,7 @@ new-package nhedger/package-name [flags]
 
 ```shell
 function new-package() {
-    local name = "$1"
+    local name="$1"
     shift
     gh repo create "$name" \
       --clone \
