@@ -22,8 +22,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.ACTIONS_TOKEN }}
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -32,15 +30,7 @@ jobs:
       - name: Install Composer dependencies
         uses: ramsey/composer-install@v2
       - name: Normalize composer.json
-        run: composer normalize
-      - name: Commit normalized composer.json
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          file_pattern: composer.json
-          commit_user_name: Composer Normalize
-          commit_user_email: nicolas@hedger.ch
-          commit_message: Normalize composer.json
-          commit_author: "Nicolas Hedger <nicolas@hedger.ch>"
+        uses: composer normalize --diff --dry-run
 
   php-cs-fixer:
     name: Check Code Style
@@ -58,5 +48,4 @@ jobs:
       - name: Create cache directory
         run: mkdir -p .build/php-cs-fixer
       - name: Run PHP CS Fixer
-        run: composer fix-style
-
+        run: composer fix-style -- --dry-run
