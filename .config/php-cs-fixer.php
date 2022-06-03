@@ -1,8 +1,10 @@
 <?php
 
+$projectRoot = dirname(__DIR__);
+
 $finder = PhpCsFixer\Finder::create()
-    ->in(__DIR__ . '/../src')
-    ->in(__DIR__ . '/../tests');
+    ->in("$projectRoot/src")
+    ->in("$projectRoot/tests");
 
 $config = new PhpCsFixer\Config();
 
@@ -28,6 +30,6 @@ $config->setRules([
 ]);
 
 return $config
-    ->setCacheFile(__DIR__ . '/../.build/php-cs-fixer/cache')
+    ->setCacheFile("$projectRoot/.build/php-cs-fixer.cache.json")
     ->setRiskyAllowed(true)
     ->setFinder($finder);
