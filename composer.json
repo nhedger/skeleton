@@ -40,7 +40,7 @@
     "scripts": {
         "analyse": "phpstan analyse --configuration=.config/phpstan.neon",
         "coverage": "phpunit --configuration=.config/phpunit.xml",
-        "fix-style": "mkdir -p .build && php-cs-fixer fix --config=.config/php-cs-fixer.php --diff",
+        "fix-style": "php -r \"mkdir('.build');\" && php-cs-fixer fix --config=.config/php-cs-fixer.php --diff",
         "test": "phpunit --configuration=.config/phpunit.xml --no-coverage"
     }
 }
