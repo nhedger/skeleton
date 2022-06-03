@@ -9,11 +9,13 @@ on:
       - '**.php'
       - 'composer.json'
       - '.config/php-cs-fixer.php'
+      - .github/workflows/coding-standards.yaml
   pull_request:
     paths:
       - '**.php'
       - 'composer.json'
       - '.config/php-cs-fixer.php'
+      - .github/workflows/coding-standards.yaml
 
 jobs:
   composer-normalize:
