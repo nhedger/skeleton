@@ -1,0 +1,32 @@
+{
+    "name": "hedger/skeleton",
+    "description": "Skeleton for building Composer packages",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hedger\\Skeleton\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hedger\\Skeleton\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nicolas Hedger",
+            "email": "nicolas@hedger.ch"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse"
+    }
+}

@@ -1,0 +1,6 @@
+# Folders
+/.phpunit.cache/
+/vendor/
+
+# Files
+/composer.lock

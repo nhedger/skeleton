@@ -1,0 +1,8 @@
+# Folders
+/.github/           export-ignore
+
+# Files
+.gitattributes      export-ignore
+.gitignore          export-ignore
+phpstan.neon        export-ignore
+phpunit.xml         export-ignore
