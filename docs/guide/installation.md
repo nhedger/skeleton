@@ -6,6 +6,6 @@ A new package may be created from this template by running the following command
 composer create-project \
   --prefer-source \
   --remove-vcs \
-  --dev \
   hedger/skeleton
+  my-project
 ```
