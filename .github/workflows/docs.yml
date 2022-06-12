@@ -11,9 +11,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: cd docs
-      - run: npm ci
-      - run: npm run build
+      - run: |
+          cd docs
+          npm ci
+          npm run build
   deploy:
     needs: "build"
     name: Deploy documentation
