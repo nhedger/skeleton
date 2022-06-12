@@ -3,4 +3,5 @@
 /vendor/
 
 # Files
+.DS_Store
 /composer.lock
