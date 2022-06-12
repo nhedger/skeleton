@@ -7,6 +7,6 @@ composer create-project \
   --prefer-source \
   --stability dev \
   --remove-vcs \
-  hedger/skeleton
+  hedger/skeleton \
   my-project
 ```
