@@ -11,12 +11,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7.2
       - run: cd docs
-      - run: pnpm ci
-      - run: pnpm run build
+      - run: npm ci
+      - run: npm run build
   deploy:
     name: Deploy documentation
     if: github.ref == 'refs/heads/main'
