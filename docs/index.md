@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Create package from template
-      link: /skeleton/guide/installation
+      link: /guide/installation
     - theme: alt
       text: View on GitHub
       link: https://github.com/nhedger/skeleton
