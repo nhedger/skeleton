@@ -1,7 +1,7 @@
 # Folders
 /.github/           export-ignore
-/docs
-/tests
+/docs               export-ignore
+/tests              export-ignore
 
 # Files
 .editorconfig       export-ignore
