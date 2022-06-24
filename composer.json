@@ -14,7 +14,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Hedger\\Skeleton\\": "tests/"
+            "Hedger\\Skeleton\\Test\\": "tests/"
         }
     },
     "authors": [
