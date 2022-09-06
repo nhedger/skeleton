@@ -49,4 +49,4 @@ jobs:
       - name: Install Composer dependencies
         uses: ramsey/composer-install@v2
       - name: Run Static Analysis
-        run: composer analyse
+        run: composer analyze
