@@ -27,6 +27,6 @@
     "require": {},
     "scripts": {
         "test": "phpunit",
-        "analyse": "phpstan analyse"
+        "analyze": "phpstan analyze"
     }
 }
