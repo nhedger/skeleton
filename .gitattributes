@@ -1,7 +1,6 @@
 # Folders
 /.github/           export-ignore
-/docs               export-ignore
-/tests              export-ignore
+/tests/             export-ignore
 
 # Files
 .editorconfig       export-ignore
@@ -9,4 +8,3 @@
 .gitignore          export-ignore
 phpstan.neon        export-ignore
 phpunit.xml         export-ignore
-renovate.json       export-ignore
