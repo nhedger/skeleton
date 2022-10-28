@@ -3,7 +3,7 @@
     "description": "Skeleton for building Composer packages",
     "type": "library",
     "require-dev": {
-        "phpunit/phpunit": "9.5.24",
+        "phpunit/phpunit": "9.5.26",
         "phpstan/phpstan": "1.8.11"
     },
     "license": "MIT",
