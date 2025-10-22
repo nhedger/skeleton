@@ -9,12 +9,12 @@ jobs:
   test:
     name: Test
     uses: ./.github/workflows/_test.yaml
-  deploy:
-    name: Deploy to Production
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to Laravel Cloud
-        uses: nhedger/laravel-cloud-deploy@v1
-        with:
-          webhook: ${{ secrets.LARAVEL_CLOUD_WEBHOOK }}
+  # deploy:
+  #   name: Deploy to Production
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Deploy to Laravel Cloud
+  #       uses: nhedger/laravel-cloud-deploy@v1
+  #       with:
+  #         webhook: ${{ secrets.LARAVEL_CLOUD_WEBHOOK }}
