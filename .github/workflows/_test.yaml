@@ -1,0 +1,36 @@
+name: Test
+
+on:
+  workflow_call:
+
+env:
+  DB_DATABASE: test
+  DB_USERNAME: test
+  DB_PASSWORD: test
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    services:
+      database:
+        image: postgres:17
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_DB: ${{ env.DB_DATABASE }}
+          POSTGRES_USER: ${{ env.DB_USERNAME }}
+          POSTGRES_PASSWORD: ${{ env.DB_PASSWORD }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+      - name: Install dependencies
+        uses: ramsey/composer-install@v3
+      - name: Set up environment
+        run: cp .env.example .env
+      - name: Generate application key
+        run: php artisan key:generate
+      - name: Run tests
+        run: php artisan test
