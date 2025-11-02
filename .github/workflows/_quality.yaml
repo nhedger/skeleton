@@ -1,0 +1,16 @@
+name: Code Quality
+
+on:
+  workflow_call:
+
+jobs:
+  biome:
+    name: Biome
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v5
+      - name: Set up Biome
+        uses: biomejs/setup-biome@v2
+      - name: Run Biome
+        run: biome ci

@@ -1,0 +1,17 @@
+name: Integrate
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  quality:
+    name: Quality
+    uses: ./.github/workflows/_quality.yaml
+  test:
+    name: Test
+    uses: ./.github/workflows/_test.yaml

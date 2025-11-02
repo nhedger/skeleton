@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+@source '../**/*.blade.php';
+@source '../**/*.ts';
+@source '../**/*.vue';
+
+@theme {
+    --font-sans: 'Inter Variable', sans-serif;
+}
