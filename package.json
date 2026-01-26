@@ -15,7 +15,7 @@
 		"@vue/tsconfig": "0.8.1",
 		"axios": "1.13.3",
 		"concurrently": "9.2.1",
-		"laravel-vite-plugin": "2.0.1",
+		"laravel-vite-plugin": "2.1.0",
 		"tailwindcss": "4.1.18",
 		"unplugin-auto-import": "21.0.0",
 		"unplugin-vue-components": "31.0.0",
