@@ -7,7 +7,7 @@
 		"dev": "vite"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.4.6",
+		"@biomejs/biome": "2.4.7",
 		"@laravel/vite-plugin-wayfinder": "0.1.7",
 		"@tailwindcss/vite": "4.2.1",
 		"@types/node": "25.4.0",
