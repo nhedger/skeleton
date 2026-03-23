@@ -18,7 +18,7 @@
 		"laravel-vite-plugin": "2.1.0",
 		"tailwindcss": "4.2.2",
 		"unplugin-auto-import": "21.0.0",
-		"unplugin-vue-components": "31.0.0",
+		"unplugin-vue-components": "31.1.0",
 		"vite": "8.0.2"
 	},
 	"dependencies": {
