@@ -8,7 +8,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.15",
-		"@laravel/vite-plugin-wayfinder": "0.1.10",
+		"@laravel/vite-plugin-wayfinder": "0.1.11",
 		"@tailwindcss/vite": "4.3.3",
 		"@types/node": "26.6.5",
 		"@vitejs/plugin-vue": "6.0.10",

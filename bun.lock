@@ -9,7 +9,7 @@
       },
       "devDependencies": {
         "@biomejs/biome": "2.5.15",
-        "@laravel/vite-plugin-wayfinder": "0.1.10",
+        "@laravel/vite-plugin-wayfinder": "0.1.11",
         "@tailwindcss/vite": "4.3.3",
         "@types/node": "26.6.5",
         "@vitejs/plugin-vue": "6.0.10",
@@ -65,7 +65,7 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
-    "@laravel/vite-plugin-wayfinder": ["@laravel/vite-plugin-wayfinder@0.1.10", "", {}, "sha512-59ZCMCEeC1UcZkqbvn+G06C4D0C/jCm525gTft7T7RPAo+0ZaHtoKl9r86OFVFd/BwuJiOYky4zJUrAPRKyRaA=="],
+    "@laravel/vite-plugin-wayfinder": ["@laravel/vite-plugin-wayfinder@0.1.11", "", {}, "sha512-KU7g7+2aVs3OzvdD9RtZaIwh2Bydk/bCzjFDz8G+G6QfloTJpmgF9jTJrrlyqGspi8DhgNYGzSReMwHQKY2OCg=="],
 
     "@oxc-project/types": ["@oxc-project/types@0.153.0", "", {}, "sha512-jSNrRIyvPVLL5E1z/tS5zLAprosGz/FuI1PWwEOz59j3E4TTTzSpqKb/RDGqJhhW0QHYISGXxq582wGx6T11Tw=="],
 
